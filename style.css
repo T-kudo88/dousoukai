@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: url('../images/kochimarunouchi1.jpg');
+    background-image: url('/dousoukai/images/kochimarunouchi1.jpg');
     background-size: cover;
     background-position: center;
     height: 250px;
