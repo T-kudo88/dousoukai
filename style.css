@@ -1,0 +1,113 @@
+body {
+    font-size: 1.1rem;
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+    background-image: url('../images/kochimarunouchi1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+}
+
+.header-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    color: #fff7d6;
+    /* 高齢者にも見やすい淡い黄色 */
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* 🔸これで常に中央揃え */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    /* 🔸画像ごとの中央寄せ保険 */
+}
+
+/* 小画面対応：iPhone 12 Pro 幅に最適化 */
+@media screen and (max-width: 430px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* セクション背景と余白 */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+section:nth-of-type(odd) {
+    background-color: #f1f3f5;
+}
+
+section:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ギャラリー：中央寄せで4枚を中央揃え */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+    /* 中央揃え */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* CTAボタン */
+.btn-primary {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
